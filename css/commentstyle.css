@@ -25,6 +25,7 @@ ul#pastcomments li:before {
 }
 
 ul#pastcomments li {
+    font-size: 20px;
     margin: 0 0 1em 0;
     /* padding: 10px; */
 }

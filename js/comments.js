@@ -16,7 +16,7 @@ document.getElementById("btnSubmitComment").addEventListener("click", function (
     var newPostRef = commentsRef.push();
     newPostRef.set({
         name: document.getElementById("tbName").value.trim(),
-        comment: document.getElementById("txComment").value.replace(/\n/g, "<br>").trim(),
+        comment: document.getElementById("txComment").value.trim(),
         frompage: location.pathname,
         when: firebase.database.ServerValue.TIMESTAMP
     });
@@ -31,8 +31,8 @@ commentsRef.once('value', function (snapshot) {
         var comment = itemData.comment;
         var name = itemData.name;
         var when = new Date(itemData.when).toLocaleDateString("en");
-        showat.innerHTML += "<li>" + comment + "<span> -- " + name + " (" + when +
-            ")</span></li>";
+        showat.innerHTML += "<li>" + comment + " <span> " + name + " (" + when +
+            ")</span></li><br>";
           })
       })
   }
