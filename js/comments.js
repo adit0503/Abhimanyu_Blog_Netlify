@@ -31,8 +31,8 @@ commentsRef.once('value', function (snapshot) {
         var comment = itemData.comment;
         var name = itemData.name;
         var when = new Date(itemData.when).toLocaleDateString("en");
-        showat.innerHTML += "<li>" + comment + " <span> " + name + " (" + when +
-            ")</span></li><br>";
+        showat.innerHTML += "<li>" + comment + "  <span> " + name + " (" + when +
+            ")</span></li><hr>";
           })
       })
   }
