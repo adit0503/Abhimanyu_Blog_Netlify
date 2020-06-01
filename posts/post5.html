@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <meta property="og:title" content=" The Enticed Consciousness " />
   <meta property="og:description" content="by Dr. Abhimanyu Singh" />
@@ -17,6 +17,8 @@
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="../css/clean-blog.min.css" rel="stylesheet">
+  <!-- Styling for comments section -->
+  <link href="../css/commentstyle.css" rel="stylesheet">
 
 </head>
 
@@ -119,6 +121,31 @@
   </article>
   <hr>
 
+  <!-- Comments Section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <div id="allcomments">
+                <h3>Comments</h3>
+                <ul id="pastcomments"></ul>
+
+                <form id="newcomment" autocomplete="off">
+                    <label for="tbName"> Name: </label>
+                    <br>
+                    <input id="tbName" type="text" maxlength="20" required>
+                    <br><br>
+                    <label for="txComment">Your Comment: </label>
+                    <br>
+                    <textarea id="txComment" maxlength="4096" required style="width:96%"></textarea>
+                    <br><br>
+                    <input type="submit" id="btnSubmitComment" value="Submit Comment">
+                </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
   <footer>
     <div class="container">
       <div class="row">
@@ -128,6 +155,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- firebase connection  -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+
+  <!-- add comments -->
+  <script src="../js/comments.js"></script>
 
 </body>
 
